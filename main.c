@@ -9,7 +9,7 @@ typedef struct {
 } Display;
 
 void draw_pixel(Display* display, size_t x, size_t y) {
-    for (size_t i = 0; i < 32; ++i) {
+    for (size_t i = 0; i < WIDTH; ++i) {
         if (i == y) {
             size_t dx = (0x8000000000000000 >> (x - 1));
             display->bmap[i] |= dx;
